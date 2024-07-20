@@ -9,6 +9,11 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-image: url(assets/blue-toned-set-paper-sheets-with-copy-space.jpg);
+  background-size: cover; /* Makes sure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image fixed on scroll */
+    background-position: center;
 }
 
 html {
