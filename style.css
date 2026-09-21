@@ -10,10 +10,13 @@
 body {
   font-family: "Poppins", sans-serif;
   background-image: url(assets/blue-toned-set-paper-sheets-with-copy-space.jpg);
-  background-size: cover; /* Makes sure the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Makes the background image fixed on scroll */
-    background-position: center;
+  background-size: cover;
+  /* Makes sure the image covers the entire background */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  background-attachment: fixed;
+  /* Makes the background image fixed on scroll */
+  background-position: center;
 }
 
 html {
@@ -156,10 +159,10 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  height: fit-content;
+  min-height: 96vh;
+  margin: 0 10rem 4rem;
   box-sizing: border-box;
-  min-height: fit-content;
 }
 
 .section-container {
@@ -359,6 +362,78 @@ article .icon {
   cursor: default;
 }
 
+/* EXPERIENCE INTERNSHIP CARDS */
+.experience-card {
+  text-align: left;
+  padding: 2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card .experience-sub-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #111;
+  text-align: left;
+}
+
+.experience-company {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.25rem;
+}
+
+.experience-duration {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 1.25rem;
+}
+
+.experience-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style-type: disc;
+}
+
+.experience-list li {
+  color: rgb(85, 85, 85);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* SKILLS SECTION */
+#skills {
+  position: relative;
+}
+
+.skills-container .details-container {
+  padding: 1.5rem 1rem;
+}
+
+.skills-container .article-container {
+  gap: 1.25rem 0.75rem;
+}
+
+.skills-container article {
+  width: 8.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skills-container article div h3 {
+  font-size: 1rem;
+}
+
+.skills-container article div p {
+  font-size: 0.8rem;
+  color: #777;
+}
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -384,6 +459,21 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+.project-tech {
+  font-size: 0.88rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0.2rem 0.5rem 0.5rem;
+}
+
+.project-desc {
+  font-size: 0.88rem;
+  color: rgb(85, 85, 85);
+  margin: 0 0.8rem 1.2rem;
+  line-height: 1.45;
+  text-align: center;
 }
 
 /* CONTACT */
@@ -443,105 +533,129 @@ footer p {
 
 
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
+
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 40vh;
-    }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: justify;
-    }
+
+  #contact,
+  #projects {
+    height: fit-content;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+  }
+
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  #contact,
+  footer {
+    height: 40vh;
+  }
+
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
+  }
+}
